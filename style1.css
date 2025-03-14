@@ -1,0 +1,55 @@
+.header{
+    height: 600px;
+    background-color: #ddd;
+    padding:40px;
+ background-image: url(me/sch.jpg);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: dimgray;
+    
+}
+.first{
+    font-size: 60px;
+    text-align: center;
+    box-shadow: 25px 25px 30px red ;
+   display: inline;
+    color: aliceblue;
+    margin-left:500px;
+    font-family:sans-serif;
+    border-radius:30px;
+    
+}
+.bio{
+    text-align: center;
+    margin-top: 70px;
+     border-radius:30px;
+   font-size: 30px;
+    box-shadow: 25px 25px 30px red ;
+    color:whitesmoke;
+}
+.menu{
+    height: 120px;
+    background-color: aqua;
+    position:sticky;
+   top:0;
+text-align: center;
+    color:aliceblue;
+      border-radius:30px;
+    box-shadow: 25px 25px 30px black ;
+    background-image: url("me/1455066-کارتون-وکتور-کارتون-دبیرستان-دانشکده-کلاس-دانشگاه-خالی-است-اشیاء-داخلی-فضای-داخلی-اتاق-تصویر-صندلی-تخته-میز-گچ-میز-میز-پنجره-یادگی.jpg");
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:auto;
+    margin-top:0px;
+ 
+}
+.me{
+    display:inline-block;
+    padding: 20px;
+    text-decoration: none;
+    
+}
