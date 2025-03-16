@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📢 اعلانات مکتب</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fb;
+            color: #333;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(45deg, #3498db, #9b59b6);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+        .navbar:hover {
+            background: linear-gradient(45deg, #8e44ad, #2980b9);
+        }
+        header {
+            background-image: url('me/colorful-school-gear-07.webp');
+            background-position: center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 12px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1200px;
+        }
+        .menu li {
+            margin: 15px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 14px 22px;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.2s ease-in-out;
+        }
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+        .announcement-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 30px;
+        }
+        .announcement {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .announcement:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .announcement img {
+            width: 100%;
+            border-radius: 15px;
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .announcement a {
+            display: block;
+            margin-top: 12px;
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .announcement a:hover {
+            color: #3498db;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 50px;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 15px;
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">📢 اعلانات مکتب</div>
+    <header>
+        <h1>📣 اعلانات مهم مکتب</h1>
+        <input type="text" id="search" placeholder="🔍 جستجو کنید..." style="padding: 12px; width: 270px; border-radius: 8px; border: none; margin-top: 20px;">
+    </header>
+    <ul class="menu">
+        <li><a href="index.html">🏠 صفحه اصلی</a></li>
+        <li><a href="about-us.html">ℹ️ درباره ما</a></li>
+        <li><a href="typography.html">📚 دوره‌های آموزشی</a></li>
+        <li><a href="contacts.html">📞 تماس با ما</a></li>
+        <li><a href="alanat.html">📢 اعلانات</a></li>
+        <li><a href="book.html">📖 کتابخانه</a></li>
+        <li><a href="history.html">📜 تاریخچه</a></li>
+        <li><a href="https://t.me/AwaiKetabPES">📢 کانال تلگرام</a></li>
+    </ul>
+    <div class="announcement-section">
+        <div class="announcement" onclick="openModal('me/حه.jpg')">
+            <img src="me/حه.jpg" alt="اعلان 1">
+            <a href="" target="_blank">📢 فوری</a>
+        </div>
+        <div class="announcement" onclick="openModal('me/استادا.jpg')">
+            <img src="me/استادا.jpg" alt="اعلان 2">
+            <a href="announcements/اعلان_2.pdf" target="_blank">📢 اعلان دوم</a>
+        </div>
+        <div class="announcement" onclick="openModal('me/حدی.jpg')">
+            <img src="me/حدی.jpg" alt="اعلان 3">
+            <a href="announcements/اعلان_3.pdf" target="_blank">📢 اعلان سوم</a>
+        </div>
+        <div class="announcement" onclick="openModal('me/اعلان4.jpg')">
+            <img src="me/اعلان4.jpg" alt="اعلان 4">
+            <a href="announcements/اعلان_4.pdf" target="_blank">📢 اعلان چهارم</a>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        var modal = document.getElementById('myModal');
+        var modalImg = document.getElementById("modalImage");
+
+        function openModal(imageSrc) {
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // When clicking anywhere outside the image, close the modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
